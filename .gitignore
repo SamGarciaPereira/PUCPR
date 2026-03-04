@@ -43,6 +43,7 @@ pnpm-debug.log*
 
 node_modules/
 vendor/
+vendors/
 bower_components/
 
 # -----------------------------
@@ -183,4 +184,13 @@ coverage/
 *.tar
 *.rar
 *.7z
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mp3
+*.avi
+
+*.bin
 
