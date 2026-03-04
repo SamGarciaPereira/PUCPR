@@ -1,0 +1,12 @@
+{
+    "senhas": {
+        "abilio": "dc02f885c052357c38b1e722003e81df",
+        "samuel": "ab3f9c820cb801c853f0f06edb2fda41",
+        "edgard": "2ec089b43b40b53cef80311d7333b110"
+    },
+    "salts": {
+        "abilio": "/koiWyLMqepi0ie7pIP3MQ==",
+        "samuel": "Qp+240FFkIpjV0qqM6ApqQ==",
+        "edgard": "orUeLjmeKLxonDwE9TCiHw=="
+    }
+}

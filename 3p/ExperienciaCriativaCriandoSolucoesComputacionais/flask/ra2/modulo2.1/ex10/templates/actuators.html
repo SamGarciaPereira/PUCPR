@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minha casa</title>
+    </head>
+
+    <body>
+        {% extends "base1.html" %}
+        {% block content %}
+        <h1>Atuadores</h1>
+        <ul>
+            {% for actuator, tipo in devices.items() %}
+            <li>
+                {{ actuator }} - {{ tipo }}
+                <a href="/remove_actuator?actuator={{ actuator }}">
+                    <button>Remover</button>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </body>
+
+</html>
