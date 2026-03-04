@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>🌵 Mercearia do Baiano | Página Produto </title>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles_pagina_produtos.css">
+</head>
+
+<body>
+    <header>
+        🧺 Mercearia do Baiano
+    </header>
+
+    <nav>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a>
+        <a href="./pagina_produtos.html"><i class="fa-solid fa-lemon"></i> Produtos</a>
+        <a href="./contato.html"><i class="fa-solid fa-phone"></i> Contato</a>
+        <a href="./login.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+    </nav>
+
+    <div class="voltar">
+        <button id="btn-voltar" class="btn-voltar"><i class="fa-solid fa-arrow-left"></i> VOLTAR</button>
+    </div>
+
+    <div class="conteudo-container">
+        <div class="conteudo">
+            <div class="imagem-produto">
+                <img src="">
+            </div>
+    
+            <div class="info-produto">
+                <h1>Nome do Produto</h1>
+                <p>Aqui vamos colocar uma breve descrição do produto, no caso, vamos fazer isso com template string para
+                    cada produto diferente.</p>
+                <div class="container-preco">
+                    <input type="number" class="input-quantidade" id="quantidade"
+                        placeholder="Digite a quantidade (em gramas)">
+                    <button type="button" class="btn-calcular-preco" id="calcularPreco">Calcular preço</button>
+                </div>
+                <p class="preco-kg"></p>
+                <button class="btn-comprar" type="submit">Comprar</button>
+                <div class="baiano-IA">
+                    <p class="titulo-baiano-IA">Saiba mais sobre esse produto com a nossa Inteligência Artificial!</p>
+                    <button id="btn-baiano" class="btn-baiano"><i class="fa-solid fa-microchip"></i> Saiba mais!</button>
+                    <p class="p-baiano-IA">...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Mercearia do Baiano | De coração pra sua mesa ❤️
+    </footer>
+
+    <script src="../js/pagina_produtos.js"></script>
+</body>
+
+</html>

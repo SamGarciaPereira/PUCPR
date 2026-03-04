@@ -1,0 +1,186 @@
+# -----------------------------
+
+# SISTEMA OPERACIONAL
+
+# -----------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*~
+
+# -----------------------------
+
+# LOGS
+
+# -----------------------------
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------
+
+# AMBIENTE / VARIÁVEIS
+
+# -----------------------------
+
+.env
+.env.*
+!.env.example
+
+# -----------------------------
+
+# DEPENDÊNCIAS
+
+# -----------------------------
+
+node_modules/
+vendor/
+bower_components/
+
+# -----------------------------
+
+# BUILD / DIST
+
+# -----------------------------
+
+dist/
+build/
+out/
+target/
+bin/
+obj/
+
+# -----------------------------
+
+# CACHE
+
+# -----------------------------
+
+.cache/
+.tmp/
+.temp/
+*.cache
+
+# -----------------------------
+
+# ARQUIVOS DE IDE
+
+# -----------------------------
+
+.vscode/
+.idea/
+*.iml
+
+# -----------------------------
+
+# DOCKER
+
+# -----------------------------
+
+.docker/
+docker-compose.override.yml
+
+# -----------------------------
+
+# LARAVEL
+
+# -----------------------------
+
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+Homestead.yaml
+Homestead.json
+
+# -----------------------------
+
+# NODE / JAVASCRIPT
+
+# -----------------------------
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+coverage/
+.next/
+.nuxt/
+.svelte-kit/
+
+# -----------------------------
+
+# JAVA
+
+# -----------------------------
+
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+
+# -----------------------------
+
+# C / C++
+
+# -----------------------------
+
+*.o
+*.out
+*.exe
+*.a
+*.so
+
+# -----------------------------
+
+# PYTHON
+
+# -----------------------------
+
+**pycache**/
+*.pyc
+*.pyo
+
+# -----------------------------
+
+# TESTES
+
+# -----------------------------
+
+coverage/
+.nyc_output/
+
+# -----------------------------
+
+# ARQUIVOS TEMPORÁRIOS
+
+# -----------------------------
+
+*.tmp
+*.temp
+*.bak
+
+# -----------------------------
+
+# ARQUIVOS GRANDES / OPCIONAL
+
+# -----------------------------
+
+*.zip
+*.tar
+*.rar
+*.7z
+

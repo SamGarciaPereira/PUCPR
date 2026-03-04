@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1> 
+
+<p>Lista completa:</p>
+<p id="demo1"></p> <br>
+
+<p>Primeiro elemento da lista:</p>
+<p id="demo2"></p> <br>
+
+<p>O método toString() retorna um string com os elementos separados por vírgula:</p>
+<p id="demo3"></p> <br>
+
+<p>JavaScript usa nomes para acessar as propriedades de um objeto</p>
+<p id="demo4"></p>
+
+<script>
+    const cars = [];
+    cars[0]= "Saab";
+    cars[1]= "Volvo";
+    cars[2]= "BMW";
+    document.getElementById("demo1").innerHTML = cars;
+    document.getElementById("demo2").innerHTML = cars[0];
+</script>
+
+<script>
+    document.getElementById("demo3").innerHTML = cars.toString();
+</script>
+
+<script>
+    const person = {firstName:"John", lastName:"Doe", age:46};
+    document.getElementById("demo4").innerHTML = person.firstName;
+</script>
+
+</body>
+</html>

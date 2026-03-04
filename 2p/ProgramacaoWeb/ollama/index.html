@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ollama</title>
+</head>
+<body>
+    <form id="meuform">
+       País: <input type="text" name="pais" placeholder="insira aqui o país">
+       <button type="submit" name="btn-submit">Enviar</button>
+    </form>
+    <script>
+        document.getElementById('meuform').addEventListener("submit", e => {
+            e.preventDefault();
+            const data 
+
+            fetch('http://localhost:5000/ask', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringfy(data)
+            })
+            .then(res => res.json())
+            .then(respjson => {
+                var composta = `
+                <div>
+                    <p>País: $(respjson.name)</p>
+                    <p>Langs: $(respjson.languages)</p>
+                    <p>Capital: $(respjson.capital)</p>
+                </div>
+                `
+
+                document.getElementById("resposta").innerHTML = composta
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  body {
+    color: black;
+    font-size: 15.6;
+    font-weight: bolder;
+  }
+  
+  /* Cabeçalho */
+  header {
+    padding: 13px;
+    display: flex;
+    background-color: #29944d;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 30px 30px;
+    position: fixed;
+    margin-top: 0%;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+  }
+  
+  header nav a{ 
+    color: white;
+    text-decoration: none;
+    margin-left: 70px;
+    margin-right: 70px;
+    align-items: flex-start;
+    font-family: "Montserrat", sans-serif;
+  }
+  /* Seção principal */
+  main {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .img-fundo {
+    margin-bottom: 15px;
+  }
+  
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 3cm;
+    flex-direction: row; /* Mantém os itens principais na horizontal */
+    font-size: 1em;
+    margin-top: 100px;
+  }
+  
+  .intro-image { /*japones*/
+    width: 380px;
+    height: 380px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 100px;
+  }
+
+  .tres-criancas { 
+    width: 550px;
+    height: 550px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 20px;
+    align-items: center;
+    float:left;
+    margin-top: 200px;
+
+  }
+  
+  .intro-text h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text p {
+    margin: 10px 0;
+    line-height: 1.6;
+    margin-right: 1cm;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  
+  .btn {
+    background-color: #0a923e;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+  }
+  
+  .btn:hover {
+    background-color: #27a063;
+  }
+  
+  .img-fundo { 
+    margin-inline: 14cm;
+  }
+  
+  .container p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .container-um{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .container-um h1 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .container-um p{
+    color: #4a4a4a;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+  }
+  .feature {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .feature:hover {
+    transform: translateY(10px);
+  }
+  .feature img {
+    width: 50px;
+    height: 50px;
+  }
+  .feature h3 {
+    color: #1d7d3d;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  .feature p {
+    color: #585858;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  .texto-prof {
+    margin-left: 17cm;
+    margin-right: 1cm;
+    max-width: 600px; /* Limita a largura do texto para melhor legibilidade */
+    margin-top: 200px;
+  }
+
+  .texto-prof h1{
+    font-family: "PT Serif", serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 2.5em;
+  }
+  
+.texto-prof p {
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: 370;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+.highlight { 
+  color: black; /* Cor do texto */ 
+  background-color: #32e0ec; /* Cor de fundo */ 
+  padding: 3px; /* Espaçamento interno */ 
+  font-family: "PT Serif", serif;
+
+}
