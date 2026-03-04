@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sensores | Banheiro</title>
+    </head>
+    <body>
+        <h2>Sensores | Banheiro</h2>
+
+        <ul>
+            {% for nome, valor in sensoresBanheiro.items() %}
+            <li>{{ nome }}: {{ valor }}</li>
+            {% endfor %}
+        </ul>
+        <p>Voltar para <a href="/banheiro">banheiro</a>!</p>
+        <p>Voltar para <a href="/">página inicial</a>!</p>
+    </body>
+</html>

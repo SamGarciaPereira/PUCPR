@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiênciaLab | Desastres Naturais</title>
+    <link rel="stylesheet" href="styles-plataforma.css">
+    <link rel="icon" type="image/png" href="assets/imagens/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <button type="button" class="btn-voltar" id="voltar">🡰 Voltar</button>
+        <img src="assets/imagens/logo-sf.png"  alt="Logo CienciaLab" class="logo">
+    </div>
+
+    <div class="area-imagem-desastre">
+        <h1 class="titulo">Desastres Naturais</h1>
+        <p class="subtitulo">🖱️ Clique em cada desastre natural.</p>
+        <img src="assets/imagens/desastres.png" class="img-desastre">
+    </div>
+
+    <button class="btn-tornado" id="btn-tornado">Tornado</button>
+    <button class="btn-vulcao" id="btn-vulcao">Vulcão</button>
+    <button class="btn-terremoto" id="btn-terremoto">Terremoto</button>
+    <button class="btn-tsunami" id="btn-tsunami">Tsunami</button>
+    <button class="btn-seca" id="btn-seca">Seca</button>
+    <button class="btn-enchente" id="btn-enchente">Enchente</button>
+    <button class="btn-queimada" id="btn-queimada">Queimada</button>
+    <button class="btn-avalanche" id="btn-avalanche">Avalanche</button>
+    <button class="btn-derretimento" id="btn-derretimento">Derretimento</button>
+    <button class="btn-tempestade" id="btn-tempestade">Tempestade</button>
+    <button class="btn-aula-desastre" id="btn-aula-desastre">Assistir aula ▶</button>
+    
+    <div class="modal-desastre" id="modal-tornado" style="display: none;">
+        <div class="area-modal-desastre">
+            <div class="area-botao-desastre">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-tornado">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/tornado.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Tornado</h2>
+                <div class="texto-desastre">
+                    <p>
+                        Tornado é um fenômeno atmosférico associado a uma nuvem de tempestade e condições muito instáveis de tempo.
+                        É caracterizado por um funil formado a partir de ventos que giram em alta velocidade em torno de um centro de baixa pressão.
+                        Quando o funil toca o solo, o fenômeno recebe o nome de tornado. Embora tenham curta duração, os ventos dos tornados podem superar a velocidade de 400 km/h, adquirindo grande poder de destruição.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-vulcao" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-vulcao">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/vulcao.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Vulcão</h2>
+                <div class="texto-desastre">
+                    <p>
+                        Uma erupção vulcânica é um evento geológico dramático que ocorre quando magma, gases e fragmentos de rocha 
+                        são expelidos de um vulcão. Essas erupções podem variar amplamente em intensidade e características. 
+                        Existem dois principais tipos de erupções: explosivas e efusivas. As erupções explosivas são violentas e 
+                        lançam grandes quantidades de cinzas, gases e fragmentos de rocha para o ar, como ocorreu no Monte Santa Helena. 
+                        Por outro lado, as erupções efusivas são mais tranquilas e caracterizadas pela emissão constante de lava fluida, 
+                        como as observadas nos vulcões Kilauea e Mauna Loa, no Havaí.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-terremoto" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-terremoto">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/terremoto.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Terremoto</h2>
+                <div class="texto-desastre">
+                    <p>
+                        Também chamados de abalos sísmicos, representam fenômenos de vibração brusca e passageira da superfície da Terra 
+                        que ocorrem por meio da movimentação das placas rochosas, bem como da atividade vulcânica e dos deslocamentos de 
+                        gases no interior da Terra. Os maremotos ou tsunamis são os terremotos que acontecem dentro dos mares, provocando 
+                        imensas deslocações de água.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-tsunami" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-tsunami">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/tsunami.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Tsunami</h2>
+                <div class="texto-desastre">
+                    <p>
+                        Tsunamis são ondas gigantescas causadas principalmente por terremotos submarinos, embora também possam ser gerados 
+                        por erupções vulcânicas ou deslizamentos de terra. Essas ondas podem percorrer grandes distâncias no oceano, 
+                        crescendo em altura à medida que se aproximam da costa, podendo causar enormes destruições em áreas litorâneas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-seca" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-seca">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/seca.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Seca</h2>
+                <div class="texto-desastre">
+                    <p>
+                        Intensificada com o aquecimento global, a seca tornou-se um problema enfrentado por muitos grupos pelo mundo. 
+                        Dessa forma, as alterações climáticas demonstram que as ações humanas estão gerando problemas como a seca e 
+                        consequentemente a expansão do processo de desertificação.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-enchente" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-enchente">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/enchente.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Enchente</h2>
+                <div class="texto-desastre">
+                    <p>
+                        As enchentes ocorrem quando há um aumento significativo no volume de água em um rio ou outro corpo d'água, 
+                        que acaba ultrapassando a capacidade de escoamento. Esse fenômeno pode ser causado por chuvas intensas, 
+                        desmatamento ou ocupação inadequada do solo. As enchentes podem causar danos significativos a áreas urbanas 
+                        e agrícolas, além de representar riscos à vida humana.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-queimada" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-queimada">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/queimada.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Queimada</h2>
+                <div class="texto-desastre">
+                    <p>
+                        A queimada é um processo de destruição do solo e da vegetação por meio do fogo. Em algumas regiões, as queimadas 
+                        são utilizadas para o cultivo agrícola, mas elas podem ser devastadoras para o meio ambiente e para as populações 
+                        que vivem nas áreas afetadas. Além de prejudicar a flora e fauna, as queimadas contribuem para a poluição do ar 
+                        e agravam os efeitos das mudanças climáticas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-avalanche" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-avalanche">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/avalanche.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Avalanche</h2>
+                <div class="texto-desastre">
+                    <p>
+                        A avalanche é um deslizamento de grandes massas de neve que ocorrem nas montanhas. Esse fenômeno é geralmente 
+                        causado por condições meteorológicas, como tempestades de neve ou o acúmulo excessivo de neve em áreas 
+                        montanhosas. As avalanches podem ser extremamente perigosas, arrastando tudo em seu caminho, incluindo árvores, 
+                        rochas e até mesmo construções.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-derretimento" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-derretimento">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/derretimento.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Derretimento</h2>
+                <div class="texto-desastre">
+                    <p>
+                        O derretimento das geleiras, fenômeno que aumentou durante o século XX, está nos deixando um planeta sem gelo. 
+                        A atividade humana é a maior culpada da emissão de dióxido de carbono e de outros gases responsáveis pelo aquecimento
+                        terrestre. O nível do mar e a estabilidade global dependem da evolução destas grandes massas de neve recristalizada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-ciclo" id="modal-tempestade" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-tempestade">🡰 Voltar</button>
+            </div>
+            
+            <div class="area-img-desastre">
+                <img src="assets/imagens/tempestade.png" class="img-modal-desastre">
+            </div>
+            
+            <div class="conteudo-desastre">
+                <h2 class="titulo-desastre">Tempestade</h2>
+                <div class="texto-desastre">
+                    <p>
+                        As inundações ou enchentes são fenômenos da natureza, intensificados pela ação humana, que estão aumentando de 
+                        maneira significativa nas últimas décadas. Um exemplo é o excesso de lixo, que entopem os bueiros, impedindo a 
+                        passagem de água. As enchentes e inundações, causadas pelo aumento de quantidade das chuvas e impedimento da evacuação, 
+                        provocam desabamentos que podem levar a morte de milhares de pessoas, além de grande destruição.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-ciclo" id="modal-aula-desastre" style="display: none;">
+        <div class="area-modal-ciclo">
+            <div class="area-botao-ciclo">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-aula-desastre">🡰 Voltar</button>
+            </div class="area-video-ciclo">
+            
+            <div class="area-video-ciclo">
+                <video class="video-ciclo" controls>
+                    <source src="assets/videos/desastres.mp4" type="video/mp4">
+                </video>
+            </div>
+    
+            <div class="conteudo-video-ciclo">
+                <h2 class="titulo-ciclo">Vídeo aula</h2>
+                <div class="texto-ciclo">
+                    <p>
+                        Assista a video-aula ao lado para entender tudo sobre o ciclo da água!
+                        <br><br>
+                        Se tiver dúvidas, chame o(a) professor(a)!
+                    </p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script-desastres.js"></script> 
+</body>
+</html>

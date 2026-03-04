@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="exClasses">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/restaurante/src/exClasses.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

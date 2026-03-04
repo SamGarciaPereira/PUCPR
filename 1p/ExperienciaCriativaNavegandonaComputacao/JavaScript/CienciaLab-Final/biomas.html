@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-plataforma.css">
+    <link rel="icon" type="image/png" href="assets/imagens/icone.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>Biomas</title>
+</head>
+<body>
+    <div class="header">
+        <button type="button" class="btn-voltar" id="voltar">🡰 Voltar</button>
+        <img src="assets/imagens/logo-sf.png"  alt="Logo CienciaLab" class="logo">
+    </div>
+
+    <div class="area-imagem">
+        <h1 class="titulo">Biomas do Brasil</h1>
+        <p class="subtitulo">🖱️ Clique em cada bioma do Brasil.</p>
+        <img src="assets/imagens/biomas.png" alt="Imagem Biomas Brasileiros" class="img-bioma">
+    </div>
+
+    <button type="button" class="btn-mata" id="btn-mata">Mata Atlântica</button>
+    <button type="button" class="btn-amazonia" id="btn-amazonia">Amazônia</button>
+    <button type="button" class="btn-pantanal" id="btn-pantanal">Pantanal</button>
+    <button type="button" class="btn-cerrado" id="btn-cerrado">Cerrado</button>
+    <button type="button" class="btn-caatinga" id="btn-caatinga">Caatinga</button>
+    <button type="button" class="btn-pampa" id="btn-pampa">Pampa</button>
+
+    <div class="modal-bioma" id="modal-mata" style="display: none;">
+        <div class="area-modal-bioma">
+            <div class="area-botao-bioma">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-mata">🡰 Voltar</button>
+            </div>
+            <div class="area-video-bioma">
+                <video class="video-bioma" controls>
+                    <source src="assets/videos/mata-atlantica.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="conteudo-video-bioma">
+                <h2 class="titulo-bioma">Mata Atlântica</h2>
+                <div class="texto-bioma">
+                    <p>
+                        "A Mata Atlântica é um bioma que cobria uma área de 15% do território brasileiro, 
+                        área essa que incluía os estados de Alagoas, Bahia, Ceará, Espírito Santo, Goiás, 
+                        Mato Grosso do Sul, Minas Gerais, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, 
+                        Rio Grande do Norte, Rio Grande do Sul, Santa Catarina, São Paulo e Sergipe. 
+                        Originalmente, o referido bioma cobria uma área superior a 1,3 milhões de km2."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bioma" id="modal-amazonia" style="display: none;">
+        <div class="area-modal-bioma">
+            <div class="area-botao-bioma">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-ama">🡰 Voltar</button>
+            </div>
+            <div class="area-video-bioma">
+                <video class="video-bioma" controls>
+                    <source src="assets/videos/amazonia.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="conteudo-video-bioma">
+                <h2 class="titulo-bioma">Amazônia</h2>
+                <div class="texto-bioma">
+                    <p>
+                        A Amazônia é um importante bioma com território que corresponde a 6,9 milhões de km² 
+                        e abrange nove países: Brasil, Bolívia, Colômbia, Equador, Venezuela, Guiana, 
+                        Guiana Francesa, Peru, Suriname.
+
+                        A parte brasileira equivale a 4.196.943 km², sendo o maior bioma brasileiro.
+
+                        Além do seu vasto território, outra característica que impressiona é a sua biodiversidade.
+                        Na Amazônia existem cerca de 2500 espécies de árvores e de 30 mil espécies de plantas, 
+                        das 100 mil existentes em toda a América do Sul.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bioma" id="modal-pantanal" style="display: none;">
+        <div class="area-modal-bioma">
+            <div class="area-botao-bioma">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-pan">🡰 Voltar</button>
+            </div>
+            <div class="area-video-bioma">
+                <video class="video-bioma" controls>
+                    <source src="assets/videos/pantanal.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="conteudo-video-bioma">
+                <h2 class="titulo-bioma">Pantanal</h2>
+                <div class="texto-bioma">
+                    <p>
+                        "O Pantanal é um dos menores biomas existentes no Brasil. Sua localização está na região Centro-Oeste, 
+                        nos estados do Mato Grosso (no sul do estado) e do Mato Grosso do Sul (no noroeste do estado), 
+                        além de poder ser encontrado no Paraguai e na Bolívia.
+
+                        É um bioma extremamente rico quando o assunto é fauna brasileira, pois abriga grande parte dos animais 
+                        existentes no Brasil. Sua preservação ambiental é alta, sendo considerado o bioma mais preservado do 
+                        país de acordo com os órgãos governamentais, como o Instituto Brasileiro de Geografia e Estatística."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bioma" id="modal-cerrado" style="display: none;">
+        <div class="area-modal-bioma">
+            <div class="area-botao-bioma">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-cer">🡰 Voltar</button>
+            </div>
+            <div class="area-video-bioma">
+                <video class="video-bioma" controls>
+                    <source src="assets/videos/cerrado.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="conteudo-video-bioma">
+                <h2 class="titulo-bioma">Cerrado</h2>
+                <div class="texto-bioma">
+                    <p>
+                        "O Cerrado é um bioma localizado no nordeste do Paraguai, no leste da Bolívia
+                        e em grande parte do Brasil Central, constituindo cerca de 22% do território brasileiro. 
+                        No Brasil, a sua área compreende os seguintes estados: Goiás, Mato Grosso, Mato Grosso do Sul, 
+                        Tocantins, Minas Gerais, Bahia, Maranhão, Piauí, Rondônia, Paraná, São Paulo e Distrito Federal, 
+                        além de alguns encraves (terreno ou território dentro do outro) no Amapá, no Amazonas e em Roraima. 
+                        Estima-se que a área abrangida pelo Cerrado no Brasil, segundo o IBGE, alcance 2.036.448 km2 de extensão."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bioma" id="modal-caatinga" style="display: none;">
+        <div class="area-modal-bioma">
+            <div class="area-botao-bioma">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-caa">🡰 Voltar</button>
+            </div>
+            <div class="area-video-bioma">
+                <video class="video-bioma" controls>
+                    <source src="assets/videos/caatinga.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="conteudo-video-bioma">
+                <h2 class="titulo-bioma">Caatinga</h2>
+                <div class="texto-bioma">
+                    <p>
+                        "A Caatinga é um bioma exclusivamente brasileiro, ocupando, aproximadamente, uma área de 734.478 km2, 
+                        que corresponde a cerca de 70% da região Nordeste e 11% do território nacional. O nome “Caatinga” 
+                        possui origem tupi-guarani e significa “floresta branca”. Essa denominação representa as características 
+                        da vegetação desse ecossistema, cujas folhas caem no período da seca."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bioma" id="modal-pampa" style="display: none;">
+        <div class="area-modal-bioma">
+            <div class="area-botao-bioma">
+                <button type="button" class="fechar-modal-btn" id="fechar-modal-pam">🡰 Voltar</button>
+            </div>
+            <div class="area-video-bioma">
+                <video class="video-bioma" controls>
+                    <source src="assets/videos/pampa.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="conteudo-video-bioma">
+                <h2 class="titulo-bioma">Pampa</h2>
+                <div class="texto-bioma">
+                    <p>
+                        "O Pampa é um bioma presente no Brasil, Argentina e Uruguai, sendo uma das áreas mais importantes 
+                        do Sul do Brasil. Ele ocupa a região do Rio Grande do Sul e estende-se para o Uruguai e Argentina, 
+                        com áreas de planícies e campos. É o bioma mais ameaçado do Brasil, devido ao desmatamento e atividades 
+                        humanas, mas é também rico em fauna e flora."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-biomas.js"></script> 
+</body>
+</html>

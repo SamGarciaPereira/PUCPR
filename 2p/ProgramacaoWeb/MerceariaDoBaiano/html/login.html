@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>🧺 Mercearia do Baiano | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles_login.css">
+</head>
+
+<body>
+        <div class="box style-margin">
+            <h1>Bem-vindo(a) à Mercearia do Baiano!</h1><br>
+
+            <center><p>Se achegue, que aqui tem fartura!</p></center>
+
+            <form id="form-login"> <!--Formulário para entrada de dados-->
+                <label for="user">Usuário:</label><br> <!--Identifica compos do formulário-->
+                <i class="fa-solid fa-user"></i> 
+                <input type="text" name="user" id="user" placeholder="Seu nome, cabra arretado!"><br>
+                
+                <label for="pass">Senha:</label><br>
+                <i class="fa-solid fa-key"></i> 
+                <input type="password" name="pass" id="pass" placeholder="Só entra com senha, visse?"><br>
+                
+                <center>
+                    <button type="submit"><!--Submit para enviar o formulário--><i class="fa-solid fa-right-to-bracket"></i> Bora comprar</button>
+                </center>              
+
+            </form>
+            
+            <p>Ainda não possui uma conta? <a href="./singUp.html"></a><!--Link para levar para outra tela--><i class="fa-solid fa-square-plus"></i>Crie uma!</a></p>
+        </div>
+    <script src="../js/login.js"></script> <!--Script no final para garantir que o html foi carregado antes para o JS funcionar-->
+</body>
+</html>

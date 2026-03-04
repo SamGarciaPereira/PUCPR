@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qtd. Primos</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <center>
+        <h3>Calculadora de números primos</h3>
+    <div class="form">
+        Digite um número limite e retornaremos a quantidade de números primos até o número fornecido:
+        <h3> </h3>
+        <input type="number" id="n">
+        <h3> </h3>
+        <button type="button" id="btn" class="btn_cal">Calcular</button>
+    </div>
+    </center>
+    
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function(event){
+    const n = parseInt(document.getElementById('n').value, 10);
+    let contador = 0;
+
+    if (isNaN(n)) {
+        alert('O input é vazio.');
+    } else if (!isNaN(n) && n >= 2) {
+        for (let i = 2; i <= n; i++) {
+            let primo = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    primo = false;
+                    break;
+                }
+            }
+            if (primo === true) {
+                contador++;
+            }
+        }
+    }
+    console.log(contador);
+    alert('Quantidade de números primos até ' + n + ' é: ' + contador);
+});
+
+    </script>
+</body>
+</html>

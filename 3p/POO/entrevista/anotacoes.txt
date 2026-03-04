@@ -1,0 +1,46 @@
+1. O Perfil da Vaga (O que eles esperam)
+A Empresa: MPS Informática.
+
+O Foco: Desenvolvimento "Mão na Massa". Eles citam Java, C# (.NET) e Delphi.
+
+Conceito Chave: Arquitetura Multicamadas.
+
+Resumo rápido: Saber que um sistema não é um bloco só. Ele é dividido em:
+Apresentação (Tela/Frontend).
+Regra de Negócio (O código Java/C# que calcula as coisas).
+Dados (Banco de dados/SQL).
+
+2. O Resumo Técnico (Baseado na Prova)
+A prova foca totalmente em Lógica de Programação e Estrutura de Dados. Eles querem ver se você sabe resolver problemas, independentemente da linguagem.
+
+Manipulação de Dados:
+
+Pilhas (Stack): Conceito LIFO (O último que entra é o primeiro que sai). Útil para "desfazer" ações ou inverter coisas.
+
+Arrays/Listas: Saber percorrer um array (for), verificar duplicatas e criar novas listas.
+
+Algoritmos Clássicos:
+
+Busca Binária: Saber que só funciona em listas ordenadas e que divide a busca ao meio para ser rápida.
+
+Matemática no Código:
+
+Resto de Divisão (%): Fundamental para saber se é par/ímpar ou para "desmontar" números (como no exercício de inverter inteiro).
+
+Porcentagem: Saber transformar 5% em 0.05 para cálculos (como nos Juros Simples).
+
+Vontade de aprender: Se perguntarem de Delphi ou C# e você não souber, diga: "Minha base forte é Java, mas entendo a lógica orientada a objetos e tenho total facilidade para aprender a sintaxe de C# ou Delphi rapidamente."
+
+Encapsulamento: Combina dados (variáveis) e métodos que operam sobre eles dentro de uma única unidade (classe), escondendo os detalhes internos e protegendo a integridade dos dados.
+Exemplo: Usar métodos públicos (getters e setters) para controlar como os dados privados de um objeto são acessados e modificados.
+
+Abstração: Foca nos aspectos essenciais de um objeto, ignorando os detalhes complexos e irrelevantes para o contexto.
+Exemplo: Ao usar um carro, o condutor interage com o volante e os pedais, sem precisar entender o funcionamento interno do motor.
+
+Herança: Permite que uma nova classe herde propriedades e métodos de uma classe existente, promovendo a reutilização de código.
+Exemplo: Uma classe Cachorro pode herdar de uma classe Animal, compartilhando características como comer() e dormir().
+
+Polimorfismo: "Muitas formas". Permite que objetos de classes diferentes respondam a uma mesma mensagem (chamada de método) de maneiras distintas.
+Exemplo: Um objeto Cachorro e um objeto Gato, ambos herdando de Animal e sobrescrevendo o método fazerBarulho(), farão sons diferentes (latir e miar, respectivamente). 
+
+

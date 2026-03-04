@@ -1,0 +1,9 @@
+13/11/2025 10:56:12 --> O IP 33.45.9.23 esta fazendo ICMP Flood
+13/11/2025 10:56:12 --> O IP 10.95.32.205 esta sendo ATACADO por ICMP Flood (DISTRIBUIDO)
+13/11/2025 10:56:12 --> O IP 10.0.2.15 esta fazendo SYN Flood
+13/11/2025 10:56:12 --> O IP 44.25.32.17 esta sendo atacado por SYN Flood
+13/11/2025 10:56:12 --> O IP 192.168.56.1 esta sendo atacado por SYN Flood
+13/11/2025 10:56:12 --> O IP 172.18.160.1 esta sendo atacado por SYN Flood
+13/11/2025 10:56:12 --> O IP 10.95.32.205 esta sendo atacado por SYN Flood
+13/11/2025 10:56:12 --> O IP 10.0.2.15 esta fazendo PORT SCAN
+13/11/2025 10:56:12 --> Foram detectados 608 hosts fazendo ataques por SYN ACK

@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #05411a;  
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    margin-top: 0%;
+    background-color: #29944d;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.logo{
+    height: 80px;
+    position: absolute;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+/* INDEX */
+
+.frase{
+    font-family:"Montserrat", sans-serif;
+    color: white;
+}
+
+.area-btn{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-biomas, .btn-ciclo, .btn-desastres{
+    margin: 25px 0; 
+    margin-bottom: 5px;
+    padding: 13px; 
+    border: none; 
+    border-radius: 25px;
+    background-color: #29944d; 
+    color: white; 
+    cursor: pointer; 
+    width: 300px; 
+    height: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-biomas:hover, .btn-ciclo:hover, .btn-desastres:hover{
+    background-color: #1d7d3d;
+    transform: scale(1.05);
+}
+
+/* BIOMAS */
+
+.btn-voltar{
+    margin-right: 1200px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #05411a;
+    color: white; 
+    cursor: pointer; 
+    width: 100px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-voltar:hover{
+    background-color: #1d7d3d;
+}
+
+
+.titulo{
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+.img-principal{
+    width: 750px;
+    height: 400px;
+    border-radius: 25px;
+}
+
+
+
+.btn-mata{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 162px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #c2c20c; 
+    color: white; 
+    cursor: pointer; 
+    width: 120px; 
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(+23deg)
+}
+
+.btn-amazonia{
+    position: absolute;
+    margin-top: 347px;
+    margin-right: 110px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #c2c20c; /* hover rgb(173, 173, 15)*/
+    color: white; 
+    cursor: pointer; 
+    width: 100px; 
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(-22deg)
+}
+
+.btn-pantanal{
+    position: absolute;
+    margin-top: 430px;
+    margin-left: 120px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #c2c20c;
+    color: white; 
+    cursor: pointer; 
+    width: 110px; 
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(+18deg)
+}
+
+.btn-cerrado{
+    position: absolute;
+    margin-top: 455px;
+    margin-right: 600px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #c2c20c; 
+    color: white; 
+    cursor: pointer; 
+    width: 100px; 
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(+28deg)
+}
+
+.btn-caatinga{
+    position: absolute;
+    margin-top: 560px;
+    margin-right: 77px;
+    border: none; 
+    border-radius: 25px;
+    background-color: rgb(173, 173, 15); 
+    color: white; 
+    cursor: pointer; 
+    width: 100px; 
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(-25deg)
+}
+
+.btn-pampa{
+    position: absolute;
+    margin-top: 580px;
+    margin-left: 300px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #c2c20c; 
+    color: white; 
+    cursor: pointer; 
+    width: 100px; 
+    height: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transform: rotate(-10deg)
+}
+
+.modal{
+    display: hidden; /* Oculta o modal inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: rgb(0 0 0 / 0.6);
+}   
+
+.area-modal{
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    background-color:#05411a ;
+    border-radius: 25px;
+    padding: 40px 30px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+}
+
+.video-bioma{
+    position: relative;
+    border-radius: 25px;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 40px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.titulo-bioma{
+    color: #ffffff;
+    margin-top: 0px;
+    margin-left: 650px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.texto-biomas{
+    position: relative;
+    color: #ffffff;
+    font-size: 23px;
+   margin-left: 650px;
+   margin-bottom: 100px;
+   font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.fechar-modal-btn{
+    border: none; 
+    border-radius: 25px;
+    background-color: #29944d; 
+    color: white; 
+    cursor: pointer; 
+    width: 90px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+/* DESASTRES */
+
+.area-btn-deastres{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    background-color: red;
+}
+
+.btn-desastres-menor{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.btn-tornado{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 270px;
+    margin-right: 600px;
+}
+
+.btn-vulcao{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 270px;
+    margin-right: 310px;
+}
+
+.btn-terremoto{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 270px;
+    margin-right: 20px;
+}
+
+.btn-tsunami{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 270px;
+    margin-left: 270px;
+}
+
+.btn-seca{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 270px;
+    margin-left: 560px;
+}
+
+.btn-enchente{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 430px;
+    margin-right: 600px;
+}
+
+.btn-queimada{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 430px;
+    margin-right: 310px;
+}
+
+.btn-avalanche{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 430px;
+    margin-right: 20px;
+}
+
+.btn-derretimento{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 430px;
+    margin-left: 270px;
+}
+
+.btn-tempestade{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    margin-top: 430px;
+    margin-left: 560px;
+}
+
+.img-desastres{
+    position: relative;
+    border-radius: 25px;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 40px; 
+    top:0;
+    left: 0;
+}
+
+.titulo-desastres{
+    color: #ffffff;
+    margin-top: 0px;
+    margin-left: 650px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.texto-desastres{ 
+    position: relative;
+    color: #ffffff;
+    font-size: 23px;
+    margin-left: 680px;
+    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+

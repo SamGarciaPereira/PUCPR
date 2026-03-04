@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Somar Números</title>
+</head>
+<body>
+    <h1>Somar Dois Números</h1>
+    <form id="sumForm">
+        <label for="num1">Número 1:</label>
+        <input type="text" id="num1" name="num1"><br><br>
+        <label for="num2">Número 2:</label>
+        <input type="text" id="num2" name="num2"><br><br>
+        <input type="button" value="Somar" onclick="somarNumeros()">
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function somarNumeros() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var resultado = num1 + num2;
+            document.getElementById('resultado').innerText = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>

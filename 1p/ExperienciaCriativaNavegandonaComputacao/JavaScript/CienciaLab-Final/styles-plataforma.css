@@ -1,0 +1,904 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #05411a;  
+    font-family: "Montserrat", sans-serif;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    margin-top: 0%;
+    background-color: #29944d;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+.logo{
+    height: 60px;
+    position: absolute;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+/* INDEX */
+
+.frase{
+    font-family:"Montserrat" sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.area-btn{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-biomas, .btn-ciclo, .btn-desastres, .btn-exercicios{
+    margin: 20px 0; 
+    margin-bottom: 5px;
+    padding: 13px; 
+    padding-left: 20px;
+    border: none; 
+    border-radius: 25px;
+    background-color: #29944d; 
+    color: white; 
+    cursor: pointer; 
+    width: 420px; 
+    height: 70px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    text-align: justify;
+}
+
+.btn-biomas:hover,
+.btn-ciclo:hover,
+.btn-desastres:hover,
+.btn-exercicios:hover{
+    background-color: #1d7d3d;
+    transform: scale(1.05);
+}
+
+.btn-voltar, .btn-sair{
+    margin-right: 1200px;
+    border: none; 
+    border-radius: 20px;
+    padding: 13px;
+    margin-left: 30px;
+    background-color: #065e24;
+    color: white; 
+    cursor: pointer; 
+    width: 150px; 
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover,
+.btn-sair:hover{
+    background-color: #06461b;
+}
+
+.titulo{
+    color: white;
+    margin-top: 110px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subtitulo{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.area-modal{
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    background-color:#05411a ;
+    border-radius: 25px;
+    padding: 40px 30px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+}
+
+.fechar-modal-btn{
+    border: none; 
+    padding: 13px;
+    border-radius: 20px;
+    background-color: #29944d; 
+    color: white; 
+    cursor: pointer; 
+    width: 120px; 
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+    align-items: left;
+}
+
+.fechar-modal-btn:hover{
+    background-color: #18572d; 
+}
+/* CSS DO CICLO DA ÁGUA */
+
+.btn-precipitacao {
+    margin-top: 360px;
+    margin-left: -425px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #08667e; 
+    color: white; 
+    cursor: pointer; 
+    width: 155px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-infiltracao {
+    margin-top: 650px;
+    margin-left: -425px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #08667e; 
+    color: white; 
+    cursor: pointer; 
+    width: 165px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-condensacao {
+    margin-top: 320px;
+    margin-left: 40px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #08667e; 
+    color: white; 
+    cursor: pointer; 
+    width: 160px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-transpiracao {
+    margin-top: 470px;
+    margin-left: 150px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #08667e; 
+    color: white; 
+    cursor: pointer; 
+    width: 170px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-vaporizacao {
+    margin-top: 520px;
+    margin-left: 540px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #08667e; 
+    color: white; 
+    cursor: pointer; 
+    width: 160px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-precipitacao:hover,
+.btn-infiltracao:hover,
+.btn-condensacao:hover,
+.btn-transpiracao:hover,
+.btn-vaporizacao:hover{
+    background-color: #064858;
+    transform: scale(1.2);
+}
+
+.btn-aula-ciclo {
+    margin-top: 720px;
+    margin-left: 270px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color:#0413a0; 
+    color: white; 
+    cursor: pointer; 
+    width: 210px; 
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-aula-ciclo:hover{
+    background-color:#030c5e; 
+    transform: scale(1.2);
+}
+
+.modal-ciclo{ 
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 0.6);
+}   
+
+.area-modal-ciclo{
+    display: flex; /* Usando flexbox para alinhar os elementos lado a lado */
+    position: absolute;
+    background-color: #05411a;
+    border-radius: 25px;
+    padding: 20px 30px;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-ciclo{
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.texto-ciclo{
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 0px;
+    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    flex: 1; /* O texto ocupa o espaço restante */
+    text-align: justify;
+}
+
+.area-botao-ciclo{
+    width: 100%;
+    position: absolute;
+}
+
+.area-img-ciclo{
+    margin-top: 65px;
+    width: 40%; 
+}
+
+.img-modal-ciclo{
+    width: 100%;
+}
+
+.conteudo-ciclo{
+    width: 60%;
+    margin-left: 30px;
+    margin-top: 45px;
+}
+
+.conteudo-video-ciclo{
+    width: 30%;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.area-video-ciclo{
+    width: 70%;
+}
+
+.video-ciclo{
+    margin-top: 65px;
+    width: 100%;
+    height: 80%;
+}
+
+/* CSS DOS EXERCÍCIOS */
+
+.area-questao {
+    width: 60%;
+    margin-top: 7%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+.area-botao-anterior{
+    width: 20%;
+    margin-top: 22%;
+    justify-content: left;
+    text-align: center;
+    padding: 30px;
+}
+
+.btn-questao-nav{
+    padding: 13px; 
+    padding-left: 20px;
+    border: none; 
+    border-radius: 20px;
+    background-color: #29944d; 
+    color: white; 
+    cursor: pointer; 
+    width: 140px; 
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-questao-nav:hover{
+    background-color: #1d7d3d;
+}
+
+.area-botao-proximo{
+    width: 20%;
+    margin-top:22%;
+    justify-content: right;
+    text-align: center;
+    padding: 30px;
+}
+
+.titulo-questao{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.area-imagem-questao{
+    text-align: center;
+}
+
+.imagem-questao{
+    width: 500px;
+}
+.enunciado{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.alternativas{
+    padding: 10px;
+    padding-left: 20px;
+    border: none; 
+    border-radius: 20px;
+    background-color: #ffffff; 
+    color: #3f3f3f; 
+    cursor: pointer; 
+    width: 100%; 
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-align: left;
+}
+
+.alternativas-certas{
+    padding: 10px;
+    padding-left: 20px;
+    border: none; 
+    border-radius: 20px;
+    background-color: #ffffff; 
+    color: #3f3f3f; 
+    cursor: pointer; 
+    width: 100%; 
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-align: left;
+}
+
+.alternativas:hover,
+.alternativas-certas:hover{
+    background-color: #cfcfcf;
+}
+
+/* CSS DOS BIOMAS */
+
+.btn-mata {
+    margin-top: 320px;
+    margin-left: 150px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #b6ab0d; 
+    color: white; 
+    cursor: pointer; 
+    width: 155px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transform: rotate(23deg); /* Inclinação aplicada */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-amazonia {
+    margin-top: 350px;
+    margin-left: -100px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #b6ab0d; 
+    color: white; 
+    cursor: pointer; 
+    width: 140px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transform: rotate(-23deg); /* Inclinação aplicada */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-pantanal {
+    margin-top: 445px;
+    margin-left: 100px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #b6ab0d; 
+    color: white; 
+    cursor: pointer; 
+    width: 140px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transform: rotate(18deg); /* Inclinação aplicada */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-cerrado {
+    margin-top: 480px;
+    margin-left: -625px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #b6ab0d; 
+    color: white; 
+    cursor: pointer; 
+    width: 140px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transform: rotate(29deg); /* Inclinação aplicada */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-caatinga {
+    margin-top: 590px;
+    margin-left: -70px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #b6ab0d; 
+    color: white; 
+    cursor: pointer; 
+    width: 120px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transform: rotate(-24deg); /* Inclinação aplicada */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-pampa {
+    margin-top: 610px;
+    margin-left: 370px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #b6ab0d; 
+    color: white; 
+    cursor: pointer; 
+    width: 160px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-mata:hover{
+    background-color: #797708; 
+    transform: rotate(23deg) scale(1.2); /* Mantém a rotação durante o hover */
+}
+.btn-amazonia:hover{
+    background-color: #797708; 
+    transform: rotate(-23deg) scale(1.2); /* Mantém a rotação durante o hover */
+}
+.btn-pantanal:hover{
+    background-color: #797708; 
+    transform: rotate(18deg) scale(1.2); /* Mantém a rotação durante o hover */
+}
+.btn-cerrado:hover{
+    background-color: #797708; 
+    transform: rotate(29deg) scale(1.2); /* Mantém a rotação durante o hover */
+}
+.btn-caatinga:hover{
+    background-color: #797708; 
+    transform: rotate(-24deg) scale(1.2); /* Mantém a rotação durante o hover */
+}
+.btn-pampa:hover {
+    background-color: #797708; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.modal{ 
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 0.6);
+}   
+
+.area-modal{
+    display: flex; /* Usando flexbox para alinhar os elementos lado a lado */
+    position: absolute;
+    background-color: #05411a;
+    border-radius: 25px;
+    padding: 20px 30px;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-bioma{
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.texto-bioma{
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 0px;
+    margin-bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    flex: 1; /* O texto ocupa o espaço restante */
+    text-align: justify;
+}
+
+.area-botao-bioma{
+    width: 100%;
+    position: absolute;
+}
+
+.conteudo-video-bioma{
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.area-video-bioma{
+    width: 50%;
+}
+
+.video-bioma{
+    margin-top: 30px;
+    width: 100%;
+    height: 80%;
+}
+
+.img-bioma{
+    width: 800px;
+    border-radius: 20px;
+}
+
+.modal-bioma{ 
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 0.6);
+}   
+
+.area-modal-bioma{
+    display: flex; /* Usando flexbox para alinhar os elementos lado a lado */
+    position: absolute;
+    background-color: #05411a;
+    border-radius: 25px;
+    padding: 20px 30px;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS DOS DESASTRES */
+
+.btn-tornado,
+.btn-vulcao,
+.btn-terremoto,
+.btn-tsunami,
+.btn-seca,
+.btn-enchente,
+.btn-queimada,
+.btn-avalanche,
+.btn-derretimento,
+.btn-tempestade {
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color: #08667e; 
+    color: white; 
+    cursor: pointer; 
+    width: 120px; 
+    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza a transição */
+}
+
+.btn-tornado {
+    margin-top: 390px;
+    margin-left: -905px;
+}
+.btn-tornado:hover {
+    background-color: #064858;
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-vulcao{
+    margin-top: 390px;
+    margin-left: -440px;
+}
+.btn-vulcao:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-terremoto{
+    margin-top: 390px;
+    margin-left: 20px;
+}
+.btn-terremoto:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-tsunami{
+    margin-top: 390px;
+    margin-left: 470px;
+}
+.btn-tsunami:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-seca{
+    margin-top: 390px;
+    margin-left: 935px;
+}
+.btn-seca:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-enchente{
+    margin-top: 590px;
+    margin-left: -905px;
+}
+.btn-enchente:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-queimada{
+    margin-top: 590px;
+    margin-left: -440px;
+}
+.btn-queimada:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-avalanche{
+    margin-top: 590px;
+    margin-left: 20px;
+}
+.btn-avalanche:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-derretimento{
+    margin-top: 590px;
+    margin-left: 470px;
+    width: 150px;
+}
+.btn-derretimento:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-tempestade{
+    margin-top: 590px;
+    margin-left: 935px;
+    width: 150px;
+}
+.btn-tempestade:hover {
+    background-color: #064858; 
+    transform: scale(1.2); /* Mantém a rotação durante o hover */
+}
+
+.btn-aula-desastre {
+    margin-top: 450px;
+    margin-left: 20px;
+    position: absolute;
+    border: none; 
+    border-radius: 25px;
+    background-color:#0413a0; 
+    color: white; 
+    cursor: pointer; 
+    width: 210px; 
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-aula-desastre:hover{
+    background-color:#030c5e; 
+    transform: scale(1.2);
+}
+
+.img-desastre{
+    border-radius: 20px;
+    width: 90%;
+}
+
+.modal-desastre{ 
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 0.6);
+}   
+
+.area-modal-desastre{
+    display: flex; /* Usando flexbox para alinhar os elementos lado a lado */
+    position: absolute;
+    background-color: #05411a;
+    border-radius: 25px;
+    padding: 20px 30px;
+    width: 60%;
+    height: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.area-botao-desastre{
+    width: 100%;
+    position: absolute;
+}
+
+.area-img-desastre{
+    margin-top: 90px;
+    width: 40%; 
+}
+
+.img-modal-desastre{
+    width: 100%;
+}
+
+.area-imagem-desastre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-desastre {
+    max-width: 100%;
+    height: auto;
+}
+
+.conteudo-desastre{
+    width: 60%;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.titulo-desastre{
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.texto-desastre{
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    line-height: 25px;
+    flex: 1; 
+    text-align: justify;
+}

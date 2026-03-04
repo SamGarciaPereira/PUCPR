@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores | Quarto</title>
+</head>
+<body>
+    <h2>Sensores | Quarto</h2>
+    
+    <ul>
+        {% for sensorQuarto in sensoresQuarto %}
+        <li>{{ sensorQuarto }}</li>
+        {% endfor %}
+    </ul>
+    <p>Voltar para <a href="/quarto">quarto</a>!</p>
+    <p>Voltar para <a href="/">página inicial</a>!</p>
+</body>
+</html>
