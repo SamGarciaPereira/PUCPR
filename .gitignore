@@ -1,9 +1,6 @@
 # -----------------------------
-
 # SISTEMA OPERACIONAL
-
 # -----------------------------
-
 .DS_Store
 Thumbs.db
 desktop.ini
@@ -13,11 +10,8 @@ $RECYCLE.BIN/
 *~
 
 # -----------------------------
-
 # LOGS
-
 # -----------------------------
-
 logs
 *.log
 npm-debug.log*
@@ -26,75 +20,64 @@ yarn-error.log*
 pnpm-debug.log*
 
 # -----------------------------
-
 # AMBIENTE / VARIÁVEIS
-
 # -----------------------------
-
 .env
 .env.*
 !.env.example
 
 # -----------------------------
-
 # DEPENDÊNCIAS
-
 # -----------------------------
-
 node_modules/
 vendor/
 vendors/
 bower_components/
 
 # -----------------------------
-
 # BUILD / DIST
-
 # -----------------------------
-
 dist/
 build/
 out/
 target/
 bin/
 obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
 
 # -----------------------------
-
 # CACHE
-
 # -----------------------------
-
 .cache/
 .tmp/
 .temp/
 *.cache
 
 # -----------------------------
-
 # ARQUIVOS DE IDE
-
 # -----------------------------
-
 .vscode/
 .idea/
 *.iml
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.dbmdl
 
 # -----------------------------
-
 # DOCKER
-
 # -----------------------------
-
 .docker/
 docker-compose.override.yml
 
 # -----------------------------
-
 # LARAVEL
-
 # -----------------------------
-
 /vendor/
 /node_modules/
 /public/storage
@@ -107,11 +90,8 @@ Homestead.yaml
 Homestead.json
 
 # -----------------------------
-
 # NODE / JAVASCRIPT
-
 # -----------------------------
-
 node_modules/
 npm-debug.log*
 yarn-error.log*
@@ -121,11 +101,8 @@ coverage/
 .svelte-kit/
 
 # -----------------------------
-
 # JAVA
-
 # -----------------------------
-
 *.class
 *.jar
 *.war
@@ -134,63 +111,48 @@ coverage/
 build/
 
 # -----------------------------
-
-# C / C++
-
+# C / C++ (INCLUINDO VISUAL STUDIO)
 # -----------------------------
-
 *.o
 *.out
 *.exe
 *.a
 *.so
+*.dll
+*.lib
+*.pdb
+*.idb
+*.ilk
+*.pch
+*.ipch
+*.tlog
 
 # -----------------------------
-
 # PYTHON
-
 # -----------------------------
-
-**pycache**/
+__pycache__/
 *.pyc
 *.pyo
 
 # -----------------------------
-
 # TESTES
-
 # -----------------------------
-
 coverage/
 .nyc_output/
 
 # -----------------------------
-
 # ARQUIVOS TEMPORÁRIOS
-
 # -----------------------------
-
 *.tmp
 *.temp
 *.bak
 
 # -----------------------------
-
 # ARQUIVOS GRANDES / OPCIONAL
-
 # -----------------------------
-
 *.zip
 *.tar
 *.rar
 *.7z
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.mp4
-*.mp3
 *.avi
-
 *.bin
-
