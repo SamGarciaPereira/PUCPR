@@ -156,3 +156,4 @@ coverage/
 *.7z
 *.avi
 *.bin
+.venv/
