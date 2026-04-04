@@ -5,7 +5,7 @@ public class Pilha {
 
     Pilha(int capacidade){
         this.capacidade = capacidade;
-        this. topo = topo -1;
+        this.topo = topo -1;
         this.dados= new int[capacidade];
     }
 
