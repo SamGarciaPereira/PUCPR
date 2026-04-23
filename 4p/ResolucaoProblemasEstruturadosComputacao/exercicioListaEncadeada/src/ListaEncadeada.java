@@ -1,56 +1,122 @@
-public class ListaEncadeada<T>{
-    private No<T> inicio;
+public class ListaEncadeada{
+    private No inicio;
+    private No fim;
     private int tamanho;
 
-    public void adiciona(T elemento){
-        No<T> novoNo = new No<T>(elemento); //novo nó que recebe um elemento de um tipo genérico
-
-        if(this.inicio == null){ //caso 1: se início == null, início recebe um novo nó
-            this.inicio = novoNo;
-        }else{ //caso 2: se inicio != null, um ponteiro "atual" é declarado em inicío e começa a percorrer a lista até um próx. elemento nulo
-            No<T> atual = this.inicio;
-            while(atual.getProximo() != null){
-                atual = atual.getProximo();
-            }
-            atual.setProximo(novoNo); //quando finalmente "atual" acha um próx elemento nulo, seta ele como um novo nó.
-        }
-        this.tamanho++; //contador do tamanho da lista
+    public ListaEncadeada(){
+        this.inicio = null;
+        this.fim = null;
+        this.tamanho = 0;
     }
 
-    public void remove(T elemento){
-        if(this.inicio == null){ //caso 1: lista vazia, nada a remover
-            System.out.println("Lista vazia! Nada a ser removido");
+    public boolean vazia(){
+        return tamanho == 0;
+    }
+
+    public void insereFim(int valor){
+        No novoNo = new No(valor);
+        if (vazia()) {
+            inicio = novoNo;
+            fim = novoNo;
+        } else{
+            fim.setProximo(novoNo);
+            fim = novoNo;
+        }
+        tamanho++;
+    }
+
+    public void insereInicio(int valor){
+        No novoNo = new No(valor);
+        if (vazia()) {
+            inicio = novoNo;
+            fim = novoNo;
+        } else{
+            novoNo.setProximo(inicio);
+            inicio = novoNo;
+        }
+        tamanho++;
+    }
+
+    public void removeInicio(){
+        if (vazia()) {
+            System.out.println("Erro: A lista está vazia!");
             return;
         }
 
-        if(this.inicio.getElemento().equals(elemento)){ //caso 2: se o elemento recebido via input, é o mesmo elemento do início da lista
-            this.inicio = this.inicio.getProximo(); //inicio pega o próx. elemento (mesmo que seja nulo). próx. passa a ser o início
-            this.tamanho--; //contador é decrementado
+        int valorRemovido = inicio.getValor();
+        inicio = inicio.getProximo();
+        tamanho--;
+        if (vazia()) {
+            fim = null;
+        }
+        System.out.println("Valor removido do inicio: " + valorRemovido);
+    }
+
+    public void removePorPosicao(int posicao){
+        if (vazia()) {
+            System.out.println("Erro: A lista está vazia!");
             return;
         }
 
-        No<T> anterior = this.inicio; //ponteiro "anterior" é declarado no início, para caso o ponteiro "atual" encontre o elemento a ser removido
-
-        No<T> atual = anterior.getProximo(); //atual sempre vai ser o próx. de anterior
-
-        while(atual != null){ //enquanto atual != null, percorre a lista
-            if(atual.getElemento().equals(elemento)){ //se o elemento apontado por "atual" == elemento recebido por input:
-                anterior.setProximo(atual.getProximo()); //"atual" é removido e "anterior" vira o próximo do atual, para não quebrar a cadeia
-                this.tamanho--; //contador é decrementado
-                return;
-            }
-            //se ainda elemento n foi encontrado, passamos os dois ponteiros uma posição pra frente:
-            anterior = atual; //anterior => atual
-            atual = atual.getProximo(); //atual => próximo
+        if(posicao <= 0 || posicao > tamanho){
+            System.out.println("Aviso: O nó na posição " + posicao + " não existe!");
+            return;
         }
-        System.out.println("Elemento não encontrado na lista encadeada."); //erro
+        if(posicao == 1){
+            System.out.println("Removendo o nó da posicão " + posicao + " (Valor: " + inicio.getValor() + ")");
+            inicio = inicio.getProximo();
+            tamanho--;
+            if (vazia()) {
+                fim = null;
+            }
+            return;
+        }
+        No aux = inicio;
+        for(int i = 1; i < posicao - 1; i++){
+            aux = aux.getProximo();
+        }
+
+        No noRemovido = aux.getProximo();
+        System.out.println("Removendo o nó da poisção " + posicao + " (Valor " + noRemovido.getValor() + ")");
+        aux.setProximo(noRemovido.getProximo());
+
+        if(posicao == tamanho){
+            fim = aux;
+        }
+        tamanho--;
     }
 
-    @Override
-    public String toString() {
-        return "ListaEncadeada{" +
-                "inicio=" + inicio +
-                ", tamanho=" + tamanho +
-                '}';
+    public void consulta(int posicao){
+        if (vazia()) {
+            System.out.println("Erro: A lista está vazia!");
+            return;
+        }
+
+        if(posicao <= 0 || posicao > tamanho){
+            System.out.println("Aviso: O nó na posição " + posicao + " não existe!");
+            return;
+        }
+
+        No aux = inicio;
+        for(int i = 1; i < posicao; i++){
+            aux = aux.getProximo();
+        }
+
+        int valorEncontrado = aux.getValor();
+        System.out.println("Na posição " + posicao + " temos o valor " + valorEncontrado);
+    }
+
+    public void imprime(){
+        if (vazia()) {
+            System.out.println("Erro: A lista está vazia!");
+            return;
+        }
+        System.out.println("Lista: ");
+        No aux = inicio;
+        while(aux != null){
+            System.out.print("[" + aux.getValor() + "] ->");
+            aux = aux.getProximo();
+        }
+        System.out.println("null (Tamanho: " + tamanho + ")");
     }
 }

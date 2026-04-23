@@ -2,41 +2,63 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int opcao, n;
-        ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+        Scanner scanner = new Scanner(System.in);
+        ListaEncadeada lista = new ListaEncadeada();
+        int opcao;
 
-        do{
-            System.out.println("===MENU===");
-            System.out.println("1 - inserir");
-            System.out.println("2 - excluir");
-            System.out.println("0 - sair");
-            System.out.print("Insira sua opção: ");
-            opcao = sc.nextInt();
+        do {
+            System.out.println("\n========= MENU DA LISTA =========");
+            lista.imprime();
+            System.out.println("1 - Inserir no Fim");
+            System.out.println("2 - Inserir no Início");
+            System.out.println("3 - Remover do Início");
+            System.out.println("4 - Remover por Posição");
+            System.out.println("5 - Consultar Posição");
+            System.out.println("0 - Sair");
+            System.out.println("=================================");
+            System.out.print("Escolha uma opção: ");
 
-            switch(opcao){
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
                 case 1:
-                    System.out.println("Você escolheu a opção 1 - inserir.");
-                    System.out.println("Digite o número que deseja inserir na lista encadeada: ");
-                    n = sc.nextInt();
-                    lista.adiciona(n);
-                    System.out.println(lista);
+                    System.out.print("Digite o valor para inserir no FIM: ");
+                    int valorFim = scanner.nextInt();
+                    lista.insereFim(valorFim);
                     break;
+
                 case 2:
-                    System.out.println("Você escolheu a opção 2 - remover.");
-                    System.out.println(lista);
-                    System.out.println("Digite o número que deseja remover da lista encadeada: ");
-                    n = sc.nextInt();
-                    lista.remove(n);
-                    System.out.println(lista);
+                    System.out.print("Digite o valor para inserir no INÍCIO: ");
+                    int valorInicio = scanner.nextInt();
+                    lista.insereInicio(valorInicio);
                     break;
+
+                case 3:
+                    lista.removeInicio();
+                    break;
+
+                case 4:
+                    System.out.print("Digite a POSIÇÃO que deseja remover: ");
+                    int posRemover = scanner.nextInt();
+                    lista.removePorPosicao(posRemover);
+                    break;
+
+                case 5:
+                    System.out.print("Digite a POSIÇÃO que deseja consultar: ");
+                    int posConsulta = scanner.nextInt();
+                    lista.consulta(posConsulta);
+                    break;
+
+                case 0:
+                    System.out.println("Saindo do programa...");
+                    break;
+
                 default:
-                    System.out.println("Digite uma opção válida e tente novamente!");
+                    System.out.println("Opção inválida!");
                     break;
             }
-        }while(opcao != 0);
+        } while (opcao != 0);
 
-        System.out.println(lista);
-        System.out.println("Encerrando programa...");
+        scanner.close();
     }
 }
