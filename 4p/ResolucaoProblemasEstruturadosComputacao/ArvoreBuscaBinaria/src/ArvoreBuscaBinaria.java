@@ -1,4 +1,4 @@
-public class ArvoreBuscaBinaria {
+public class ArvoreBuscaBinaria{
     private No raiz;
 
     public ArvoreBuscaBinaria(){
@@ -10,8 +10,8 @@ public class ArvoreBuscaBinaria {
     }
 
     public No inserirRec(No atual, int valor){
-        if (atual == null){
-            return new No(valor);
+        if(atual == null){
+            return null;
         }
         if(valor < atual.getValor()){
             atual.setEsquerda(inserirRec(atual.getEsquerda(), valor));
@@ -28,7 +28,7 @@ public class ArvoreBuscaBinaria {
 
     public void preOrdemRec(No atual){
         if(atual != null){
-            System.out.print(atual.getValor() + " ");
+            System.out.print(atual.getValor());
             preOrdemRec(atual.getEsquerda());
             preOrdemRec(atual.getDireita());
         }
@@ -53,7 +53,7 @@ public class ArvoreBuscaBinaria {
     }
 
     public void posOrdemRec(No atual){
-        if(atual !=  null){
+        if(atual != null){
             posOrdemRec(atual.getEsquerda());
             posOrdemRec(atual.getDireita());
             System.out.print(atual.getValor());
@@ -64,7 +64,7 @@ public class ArvoreBuscaBinaria {
         raiz = removerMaiorRec(raiz);
     }
 
-    private No removerMaiorRec(No atual){
+    public No removerMaiorRec(No atual){
         if(atual == null){
             return null;
         }
@@ -84,7 +84,7 @@ public class ArvoreBuscaBinaria {
             return null;
         }
         if(atual.getEsquerda() == null){
-            return atual.getEsquerda();
+            return atual.getDireita();
         }
         atual.setEsquerda(removerMenorRec(atual.getEsquerda()));
         return atual;
@@ -95,9 +95,6 @@ public class ArvoreBuscaBinaria {
     }
 
     public No removerElementoRec(No atual, int valor){
-        if(atual == null){
-            return null;
-        }
         if (valor < atual.getValor()) {
             atual.setEsquerda(removerElementoRec(atual.getEsquerda(), valor));
         } else if (valor > atual.getValor()) {
@@ -118,7 +115,7 @@ public class ArvoreBuscaBinaria {
         return atual;
     }
 
-    public int encontrarMenorValor(No atual){
+    private int encontrarMenorValor(No atual){
         while(atual.getEsquerda() != null){
             atual = atual.getEsquerda();
         }
