@@ -1,21 +1,45 @@
-public class Main {
-    public static void bubblesort(int tamanho, int []vetor) {
-        int temp = 0;
-        boolean flag;
-        for(int i = 0; i < tamanho; i++){
-            flag = false;
-            for(int j = 1; j < tamanho-i; j++){
-                if(vetor[j-1] > vetor [j]){
+import java.util.Random;
 
-                    temp = vetor[j-1];
-                    vetor[j-1] = vetor [j];
-                    vetor[j] = temp;
-                    flag = true;
+public class Main {
+    public static void main(String[] args){
+        Random r = new Random();
+        int tamanho = 10;
+        int[] numeros = new int[tamanho];
+
+        for(int i = 0; i < tamanho; i++){
+            numeros[i] = r.nextInt(100);
+        }
+
+        System.out.println("Antes:");
+        imprimeVetor(numeros, tamanho);
+
+        bubbleSort(numeros, tamanho);
+
+        System.out.println("Depois:");
+        imprimeVetor(numeros, tamanho);
+    }
+
+    public static void bubbleSort(int[] numeros, int tamanho){
+        boolean trocouAlgo = true;
+
+        while(trocouAlgo){
+            trocouAlgo = false;
+
+            for(int i = 0; i < tamanho - 1; i++){
+                if(numeros[i] > numeros[i + 1]){
+                    trocouAlgo = true;
+                    int temp = numeros[i];
+                    numeros[i] = numeros[i + 1];
+                    numeros[i + 1] = temp;
                 }
             }
-            if(flag == false){
-                break;
-            }
+        }
+    }
+
+
+    public static void imprimeVetor(int[] numeros, int tamanho){
+        for(int i = 0; i < tamanho; i++){
+            System.out.println(numeros[i]);
         }
     }
 }
