@@ -20,18 +20,8 @@ public class Main {
         imprimeVetor(numeros, tamanho);
     }
 
-    public static void selectionSort(int[] vetor, int tamanho){
-        for(int i = 0; i < tamanho - 1; i++){
-            int min = vetor[i];
-            int indexMin = i;
-            for(int j = i + 1; j < tamanho; j++){
-                if(vetor[j] < min){
-                    min = vetor[j];
-                    indexMin = j;
-                }
-            }
-            troca(vetor, i, indexMin);
-        }
+    public static void selectionSort(int[] numeros, int tamanho){
+        
     }
 
     public static void troca(int[] vetor, int p1, int p2){

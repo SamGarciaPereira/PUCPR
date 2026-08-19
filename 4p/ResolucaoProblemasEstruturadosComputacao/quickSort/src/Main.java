@@ -26,37 +26,36 @@ public class Main {
         }
     }
 
-    public static void quickSort(int[] vetor, int inicio, int fim){
+    public static void quickSort(int[] numeros, int inicio, int fim){
         if(inicio >= fim){
             return;
         }
 
-        int pivo = vetor[fim];
+        int pivo = numeros[fim];
 
         int ponteiroEsq = inicio;
         int ponteiroDir = fim;
 
         while(ponteiroEsq < ponteiroDir){
-            while(vetor[ponteiroEsq] <= pivo && ponteiroEsq < ponteiroDir){
+            while(numeros[ponteiroEsq] <= pivo && ponteiroEsq < ponteiroDir){
                 ponteiroEsq++;
             }
 
-            while(vetor[ponteiroDir] >= pivo && ponteiroDir > ponteiroEsq){
+            while(numeros[ponteiroDir] >= pivo && ponteiroDir > ponteiroEsq){
                 ponteiroDir--;
             }
 
-            troca(vetor, ponteiroEsq, ponteiroDir);
+            troca(numeros, ponteiroEsq, ponteiroDir);
         }
+        troca(numeros, ponteiroEsq, fim);
 
-        troca(vetor, ponteiroEsq, fim);
-
-        quickSort(vetor, inicio, ponteiroEsq - 1);
-        quickSort(vetor, ponteiroEsq + 1, fim);
+        quickSort(numeros, inicio, ponteiroEsq - 1);
+        quickSort(numeros, ponteiroEsq + 1, fim);
     }
 
-    private static void troca(int[] vetor, int index1, int index2){
-        int temp = vetor[index1];
-        vetor[index1] = vetor[index2];
-        vetor[index2] = temp;
+    public static void troca(int[] vetor, int p1, int p2){
+        int temp = vetor[p1];
+        vetor[p1] = vetor[p2];
+        vetor[p2] = temp;
     }
 }
